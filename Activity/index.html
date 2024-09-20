@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Activity</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: grey;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    #quiz-container {
+        background-color: lightgray;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .question {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .options {
+        list-style: none;
+        padding: 0;
+    }
+
+    .options li {
+        background-color: #f0f0f0;
+        padding: 12px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .options li:hover {
+        background-color: #e0e0e0;
+    }
+
+    #next-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    #next-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #result {
+        background-color: white;
+        position: absolute;
+        text-align: center;
+        border-radius: 25px;
+        top: 80px;
+        left: 40%;
+        width: 200px;
+        height: auto;
+        margin: 20px;
+        font-size: 20px;
+        color: green;
+        margin-top: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="question" class="question"></div>
+        <ul id="options" class="options"></ul>
+        <button id="next-btn" class="hidden">Next</button>
+    </div>
+
+    <div id="result" class="hidden score"></div>
+
+    <script src="quiz.js"></script>
+
+</body>
+</html>
